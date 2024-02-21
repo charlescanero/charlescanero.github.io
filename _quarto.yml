@@ -23,5 +23,5 @@ format:
     highlight-style: atom-one
     css: styles.css
     toc: false
-    include-after-body: target_blank.html
+    # include-after-body: target_blank.html
     
