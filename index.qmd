@@ -1,5 +1,5 @@
 ---
-title: "YOUR NAME" 
+title: "Charles Canero" 
 about:
   template: trestles  # jolla  trestles  solana  marquee  broadside
   image: img/profile.png
@@ -32,10 +32,10 @@ Finley Malloc majors in Data Analytics at SUNY Geneseo. When not working on data
 
 State University of New York at Geneseo | Geneseo, NY <br>
 B.S. in Data Analytics | Aug 2022 - May 2026 <br>
-Minor in Business Administration 
+ 
 
 ## Experience
 
-Starbucks Analytics | Data Analyst Intern | May 2024 - Aug 2024
+Geneseo Analytics | Data Analyst Undergrad | Aug 2023 - May 2025
 
 
