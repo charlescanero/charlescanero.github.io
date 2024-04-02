@@ -9,24 +9,21 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
-    - icon: instagram
-      text: Instagram
-      href: https://instagram.com
+      href: https://www.linkedin.com/in/charles-canero-b73561301/
     - icon: github
       text: GitHub
-      href: https://github.com
+      href: https://github.com/charlescanero
     - icon: file-earmark-pdf
       text: Resumé
-      href: https://GITHUB_USERNAME.github.io/resume-example.pdf
+      href: https://charlescanero.github.io/resume.pdf
     - icon: mailbox
       text: Email
-      href: mailto:YOUR_EMAIL@geneseo.edu
+      href: mailto:cmc100@geneseo.edu
 
 ---
 
 
-Finley Malloc majors in Data Analytics at SUNY Geneseo. When not working on data analytics, Finley enjoys spending time unicycling and playing with her pet iguana.
+Charles Canero majors in Data Analytics at SUNY Geneseo. When not working on data analytics, Charles enjoys spending time working out and playing video games.
 
 ## Education
 
