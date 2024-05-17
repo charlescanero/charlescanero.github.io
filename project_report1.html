@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Charles Canero III – project_report1</title>
+<title>Charles Canero III - ESG and Financial Data Analysis: Analyzing the Effects of a Company’s Risk Score on their Performance.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,18 +143,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ESG and Financial Data Analysis: Analyzing the Effects of a Company’s Risk Score on their Performance.</h1>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
 
 <p><a href="https://colab.research.google.com/github/charlescanero/charlescanero.github.io/blob/main/project_report.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<p>#ESG and Financial Data Analysis: Analyzing the Effects of a Company’s Risk Score on their Performance.</p>
-<p>##Introduction</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Environmental, Social, and Governance (ESG) criteria are increasingly being used by investors to screen potential investments and assess a company’s sustainability and ethical impact. Coupled with financial and accounting data, these metrics provide a comprehensive view of a company’s performance and risk.</p>
-<p>##Objective:</p>
+</section>
+<section id="objective" class="level2">
+<h2 class="anchored" data-anchor-id="objective">Objective:</h2>
 <p>Hypothesis: Higher ESG risk ratings (indicating greater unmanaged risks in environmental, social, and governance areas) are associated with poorer financial health and lower profitability.</p>
 <p>Objective: To analyze the financial performance of companies with different levels of ESG risk ratings and identify any significant correlations.</p>
-<p>##Data Collection</p>
+</section>
+<section id="data-collection" class="level2">
+<h2 class="anchored" data-anchor-id="data-collection">Data Collection</h2>
 <p>The data for this project was collected using Python. Financial and accounting data were retrieved using the yfinance library, and ESG data was collected using Selenium to scrape Yahoo! Finance’s Sustainability section.</p>
-<p>##Descriptive Statistics</p>
+</section>
+<section id="descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-statistics">Descriptive Statistics</h2>
 <p>First, let’s load the collected data and calculate the descriptive statistics.</p>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -1392,7 +1413,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Judging by the heatmap, its clear to see that ESG ratings do not have much of an effect on most financial data. However, there is a moderate correlation of .43 between “Preferred Stock Dividends” and the “Social Risk Score”.</p>
-<p>##Exploratory Data Analysis</p>
+</section>
+<section id="exploratory-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h2>
 <p>Lets analyze this relationship further.</p>
 <div class="cell" data-outputid="599c30a2-cc0a-426d-e60c-25bf8f25806b" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x<span class="op">=</span><span class="st">'Preferred Stock Dividends'</span>, y<span class="op">=</span><span class="st">'Social Risk Score'</span>, data<span class="op">=</span>heatmap_data, marker<span class="op">=</span><span class="st">'o'</span>)</span>
@@ -1437,12 +1460,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>As we can see in the graphed data, as social risk score and average perferred stock dividends increase, total revenue also increases. This disproves our hypothesis testing if risk scores are associated with poorer financial health and lower profitability.</p>
-<p>##Significance</p>
+</section>
+<section id="significance" class="level2">
+<h2 class="anchored" data-anchor-id="significance">Significance</h2>
 <p>Though most of the data is inconclusive due to low correlations, the moderate correlation between “Average Preferred Stock Dividends” and “Social Risk Score” provides slight implications. By plotting ‘Total Revenue’ and ‘Social Risk Score’ against ‘Average Preferred Stock Dividends’, its clear to see that social risk score is associated with the inverse of our hypothesis.</p>
-<p>##Results</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
 <p>In general, there is little to no relationships between risk scores and financial health. However, if there is a correlation, it is contradictory to our hypothesis as risk scores are more associated with better financial health, rather than poor financial health.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
