@@ -1,6 +1,6 @@
 ---
 title: DANL Project
-subtitle: "Data-Driven Mastery: Unlocking Business Potential"
+subtitle: "ESG and Financial Data Analysis: Analyzing the Effects of a Company's Risk Score on their Performance"
 author: 
   - Charles Canero III
 
@@ -18,7 +18,7 @@ execute:
 
 from: markdown+emoji
 ---
-```{r setup}
+```{python}
 #| include: false
 library(tidyverse)
 library(skimr)
