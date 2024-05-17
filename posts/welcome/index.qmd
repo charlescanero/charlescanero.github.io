@@ -1,12 +1,51 @@
 ---
 title: "Welcome To My Blog"
-author: "YOUR NAME"
+author: "Charles Canero III"
 date: "2023-10-27"
 categories: [news]
+
+execute: 
+  warning: false
+  message: false
+  code-tools: true
+  
+toc: true
+
+format: 
+  html: default
+  ipynb: default
+format-links: [ipynb]
+
+href: simplepython.ipynb
 ---
 
-This is the first post in a Quarto blog. Welcome!
 
+
+ 
+format-links: [ipynb]
 ![](thumbnail.jpg)
 
 Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+
+```{r}
+#| include: false
+
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(skimr)
+library(ggthemes)
+library(hrbrthemes)
+
+theme_set(theme_ipsum()+
+          theme(strip.background =element_rect(fill="lightgray"),
+                axis.title.x  = element_text(angle = 0,
+                                            size = rel(1.5),
+                                            margin = margin(10,0,0,0)),
+                axis.title.y  = element_text(angle = 0,
+                                            size = rel(1.5),
+                                            margin = margin(0,10,0,0))
+                )
+          )
+```
+
