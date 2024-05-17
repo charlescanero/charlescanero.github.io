@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Charles Canero III – project_report1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Charles Canero III</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./project_report1.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog-listing.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<p><a href="https://colab.research.google.com/github/charlescanero/charlescanero.github.io/blob/main/project_report.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<p>#ESG and Financial Data Analysis: Analyzing the Effects of a Company’s Risk Score on their Performance.</p>
+<p>##Introduction</p>
+<p>Environmental, Social, and Governance (ESG) criteria are increasingly being used by investors to screen potential investments and assess a company’s sustainability and ethical impact. Coupled with financial and accounting data, these metrics provide a comprehensive view of a company’s performance and risk.</p>
+<p>##Objective:</p>
+<p>Hypothesis: Higher ESG risk ratings (indicating greater unmanaged risks in environmental, social, and governance areas) are associated with poorer financial health and lower profitability.</p>
+<p>Objective: To analyze the financial performance of companies with different levels of ESG risk ratings and identify any significant correlations.</p>
+<p>##Data Collection</p>
+<p>The data for this project was collected using Python. Financial and accounting data were retrieved using the yfinance library, and ESG data was collected using Selenium to scrape Yahoo! Finance’s Sustainability section.</p>
+<p>##Descriptive Statistics</p>
+<p>First, let’s load the collected data and calculate the descriptive statistics.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>bals <span class="op">=</span> pd.read_csv(<span class="st">"balance_sheets.csv"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>incomes <span class="op">=</span> pd.read_csv(<span class="st">"income_statements.csv"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>hists <span class="op">=</span> pd.read_csv(<span class="st">"history.csv"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>esg_results_df <span class="op">=</span> pd.read_csv(<span class="st">"esg_ratings.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Balance Sheet data extracted from the last year.</p>
+<div class="cell" data-outputid="977420a9-5d8f-4a20-94fc-b83ffd71f813">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bals.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="36">
+
+  <div id="df-7b2767a2-5f90-4d40-bdaa-944acbd81cd7" class="colab-df-container">
+    <div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Ordinary Shares Number</th>
+<th data-quarto-table-cell-role="th">Share Issued</th>
+<th data-quarto-table-cell-role="th">Net Debt</th>
+<th data-quarto-table-cell-role="th">Total Debt</th>
+<th data-quarto-table-cell-role="th">Tangible Book Value</th>
+<th data-quarto-table-cell-role="th">Invested Capital</th>
+<th data-quarto-table-cell-role="th">Working Capital</th>
+<th data-quarto-table-cell-role="th">Net Tangible Assets</th>
+<th data-quarto-table-cell-role="th">Common Stock Equity</th>
+<th data-quarto-table-cell-role="th">Total Capitalization</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Trading Securities</th>
+<th data-quarto-table-cell-role="th">Investmentsin Subsidiariesat Cost</th>
+<th data-quarto-table-cell-role="th">Total Partnership Capital</th>
+<th data-quarto-table-cell-role="th">Limited Partnership Capital</th>
+<th data-quarto-table-cell-role="th">Dueto Related Parties Non Current</th>
+<th data-quarto-table-cell-role="th">Duefrom Related Parties Non Current</th>
+<th data-quarto-table-cell-role="th">Fixed Assets Revaluation Reserve</th>
+<th data-quarto-table-cell-role="th">Current Deferred Taxes Liabilities</th>
+<th data-quarto-table-cell-role="th">Current Deferred Taxes Assets</th>
+<th data-quarto-table-cell-role="th">General Partnership Capital</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>3.089000e+03</td>
+<td>3.089000e+03</td>
+<td>2.674000e+03</td>
+<td>3.060000e+03</td>
+<td>3.093000e+03</td>
+<td>3.090000e+03</td>
+<td>2.699000e+03</td>
+<td>3.093000e+03</td>
+<td>3.093000e+03</td>
+<td>3.091000e+03</td>
+<td>...</td>
+<td>1.220000e+02</td>
+<td>3.600000e+01</td>
+<td>1.000000e+01</td>
+<td>1.000000e+01</td>
+<td>1.800000e+01</td>
+<td>2.200000e+01</td>
+<td>3.000000e+00</td>
+<td>3.000000e+00</td>
+<td>5.000000e+00</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>6.286376e+08</td>
+<td>7.349344e+08</td>
+<td>1.397200e+10</td>
+<td>2.010570e+10</td>
+<td>6.313827e+09</td>
+<td>3.538533e+10</td>
+<td>2.206797e+09</td>
+<td>6.666156e+09</td>
+<td>1.658740e+10</td>
+<td>3.307422e+10</td>
+<td>...</td>
+<td>8.811779e+10</td>
+<td>2.777855e+09</td>
+<td>1.964380e+10</td>
+<td>1.963130e+10</td>
+<td>7.742222e+08</td>
+<td>8.024382e+07</td>
+<td>3.001667e+09</td>
+<td>2.325667e+08</td>
+<td>3.234000e+08</td>
+<td>-2000000.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>1.260834e+09</td>
+<td>1.392953e+09</td>
+<td>2.883267e+10</td>
+<td>4.713261e+10</td>
+<td>2.860947e+10</td>
+<td>7.120085e+10</td>
+<td>9.465743e+09</td>
+<td>2.982931e+10</td>
+<td>3.228088e+10</td>
+<td>6.461270e+10</td>
+<td>...</td>
+<td>1.284742e+11</td>
+<td>3.849279e+09</td>
+<td>1.568801e+10</td>
+<td>1.567458e+10</td>
+<td>8.372440e+08</td>
+<td>1.173026e+08</td>
+<td>5.158336e+09</td>
+<td>2.419972e+08</td>
+<td>6.618761e+07</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>3.167625e+06</td>
+<td>9.589239e+06</td>
+<td>1.970800e+07</td>
+<td>1.404000e+06</td>
+<td>-9.834700e+10</td>
+<td>1.221960e+08</td>
+<td>-4.443000e+10</td>
+<td>-9.834700e+10</td>
+<td>-1.723300e+10</td>
+<td>8.600000e+07</td>
+<td>...</td>
+<td>0.000000e+00</td>
+<td>0.000000e+00</td>
+<td>4.479000e+09</td>
+<td>4.479000e+09</td>
+<td>5.000000e+06</td>
+<td>0.000000e+00</td>
+<td>2.300000e+07</td>
+<td>9.220000e+07</td>
+<td>2.550000e+08</td>
+<td>-2000000.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>1.375061e+08</td>
+<td>1.672020e+08</td>
+<td>2.021972e+09</td>
+<td>3.144718e+09</td>
+<td>-1.799000e+09</td>
+<td>6.635704e+09</td>
+<td>-1.637970e+08</td>
+<td>-1.804800e+09</td>
+<td>3.012000e+09</td>
+<td>6.462800e+09</td>
+<td>...</td>
+<td>1.220000e+08</td>
+<td>4.755000e+08</td>
+<td>4.826250e+09</td>
+<td>4.826250e+09</td>
+<td>1.400000e+08</td>
+<td>5.500000e+03</td>
+<td>2.350000e+07</td>
+<td>9.285000e+07</td>
+<td>2.820000e+08</td>
+<td>-2000000.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>2.698400e+08</td>
+<td>3.043000e+08</td>
+<td>5.418138e+09</td>
+<td>6.889150e+09</td>
+<td>2.021728e+09</td>
+<td>1.370750e+10</td>
+<td>9.370000e+08</td>
+<td>1.992000e+09</td>
+<td>6.960000e+09</td>
+<td>1.332460e+10</td>
+<td>...</td>
+<td>6.486182e+09</td>
+<td>1.388500e+09</td>
+<td>1.910150e+10</td>
+<td>1.908800e+10</td>
+<td>3.050000e+08</td>
+<td>3.529500e+06</td>
+<td>2.400000e+07</td>
+<td>9.350000e+07</td>
+<td>3.100000e+08</td>
+<td>-2000000.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>5.949060e+08</td>
+<td>6.834949e+08</td>
+<td>1.292294e+10</td>
+<td>1.717935e+10</td>
+<td>8.241000e+09</td>
+<td>3.242520e+10</td>
+<td>2.615550e+09</td>
+<td>8.522000e+09</td>
+<td>1.697300e+10</td>
+<td>3.124930e+10</td>
+<td>...</td>
+<td>1.358348e+11</td>
+<td>1.962875e+09</td>
+<td>3.345025e+10</td>
+<td>3.343100e+10</td>
+<td>1.529250e+09</td>
+<td>1.440000e+08</td>
+<td>4.491000e+09</td>
+<td>3.027500e+08</td>
+<td>3.440000e+08</td>
+<td>-2000000.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>1.572341e+10</td>
+<td>1.572341e+10</td>
+<td>3.133490e+11</td>
+<td>4.485490e+11</td>
+<td>2.636610e+11</td>
+<td>7.488770e+11</td>
+<td>1.538040e+11</td>
+<td>2.722630e+11</td>
+<td>3.067370e+11</td>
+<td>7.325090e+11</td>
+<td>...</td>
+<td>5.742130e+11</td>
+<td>1.228100e+10</td>
+<td>3.668200e+10</td>
+<td>3.665600e+10</td>
+<td>2.376000e+09</td>
+<td>4.420000e+08</td>
+<td>8.958000e+09</td>
+<td>5.120000e+08</td>
+<td>4.260000e+08</td>
+<td>-2000000.0</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>8 rows × 142 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-7b2767a2-5f90-4d40-bdaa-944acbd81cd7')" title="Convert this dataframe to an interactive table." style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-7b2767a2-5f90-4d40-bdaa-944acbd81cd7 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-7b2767a2-5f90-4d40-bdaa-944acbd81cd7');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-c2b50788-c346-4fae-bce0-be1e2aa5dfef">
+  <button class="colab-df-quickchart" onclick="quickchart('df-c2b50788-c346-4fae-bce0-be1e2aa5dfef')" title="Suggest charts" style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-c2b50788-c346-4fae-bce0-be1e2aa5dfef button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+<p>Historical Financial Data extracted from the last 3 months.</p>
+<div class="cell" data-outputid="8c6488c4-a770-4aa2-ac44-f602df5df14d">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>hists.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="37">
+
+  <div id="df-6d687677-7eac-4a75-abc6-d176af413de6" class="colab-df-container">
+    <div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">High</th>
+<th data-quarto-table-cell-role="th">Low</th>
+<th data-quarto-table-cell-role="th">Close</th>
+<th data-quarto-table-cell-role="th">Volume</th>
+<th data-quarto-table-cell-role="th">Dividends</th>
+<th data-quarto-table-cell-role="th">Stock Splits</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>197796.000000</td>
+<td>197796.000000</td>
+<td>197796.000000</td>
+<td>197796.000000</td>
+<td>1.977960e+05</td>
+<td>197796.000000</td>
+<td>197796.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>149.309518</td>
+<td>150.892275</td>
+<td>147.824738</td>
+<td>149.415751</td>
+<td>4.134482e+06</td>
+<td>0.008568</td>
+<td>0.000139</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>329.718700</td>
+<td>333.286090</td>
+<td>326.686469</td>
+<td>330.093311</td>
+<td>9.289442e+06</td>
+<td>0.132398</td>
+<td>0.016646</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>1.030000</td>
+<td>1.060000</td>
+<td>0.780000</td>
+<td>0.980000</td>
+<td>0.000000e+00</td>
+<td>0.000000</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>39.985984</td>
+<td>40.450001</td>
+<td>39.532875</td>
+<td>40.010676</td>
+<td>8.323000e+05</td>
+<td>0.000000</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>82.056905</td>
+<td>82.941236</td>
+<td>81.169998</td>
+<td>82.105110</td>
+<td>1.707600e+06</td>
+<td>0.000000</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>154.942161</td>
+<td>156.519590</td>
+<td>153.534923</td>
+<td>155.069881</td>
+<td>3.854425e+06</td>
+<td>0.000000</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>8022.919922</td>
+<td>8158.990234</td>
+<td>8010.000000</td>
+<td>8099.959961</td>
+<td>3.160112e+08</td>
+<td>35.000000</td>
+<td>4.000000</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-6d687677-7eac-4a75-abc6-d176af413de6')" title="Convert this dataframe to an interactive table." style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-6d687677-7eac-4a75-abc6-d176af413de6 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-6d687677-7eac-4a75-abc6-d176af413de6');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-c2c8a4ce-caad-4b45-82ae-56cf4d1a29b5">
+  <button class="colab-df-quickchart" onclick="quickchart('df-c2c8a4ce-caad-4b45-82ae-56cf4d1a29b5')" title="Suggest charts" style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-c2c8a4ce-caad-4b45-82ae-56cf4d1a29b5 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+<p>Income Statement Data extracted from the last year.</p>
+<div class="cell" data-outputid="645d920c-7174-4f83-c133-f30baa151bce">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>incomes.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="38">
+
+  <div id="df-0a1615b3-2b25-4f0f-b493-f79dcb9a450d" class="colab-df-container">
+    <div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Tax Effect Of Unusual Items</th>
+<th data-quarto-table-cell-role="th">Tax Rate For Calcs</th>
+<th data-quarto-table-cell-role="th">Normalized EBITDA</th>
+<th data-quarto-table-cell-role="th">Net Income From Continuing Operation Net Minority Interest</th>
+<th data-quarto-table-cell-role="th">Reconciled Depreciation</th>
+<th data-quarto-table-cell-role="th">Reconciled Cost Of Revenue</th>
+<th data-quarto-table-cell-role="th">EBITDA</th>
+<th data-quarto-table-cell-role="th">EBIT</th>
+<th data-quarto-table-cell-role="th">Net Interest Income</th>
+<th data-quarto-table-cell-role="th">Interest Expense</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Salaries And Wages</th>
+<th data-quarto-table-cell-role="th">Total Other Finance Cost</th>
+<th data-quarto-table-cell-role="th">Other Taxes</th>
+<th data-quarto-table-cell-role="th">Provision For Doubtful Accounts</th>
+<th data-quarto-table-cell-role="th">Depreciation Income Statement</th>
+<th data-quarto-table-cell-role="th">Insurance And Claims</th>
+<th data-quarto-table-cell-role="th">Rent And Landing Fees</th>
+<th data-quarto-table-cell-role="th">Excise Taxes</th>
+<th data-quarto-table-cell-role="th">Depletion Income Statement</th>
+<th data-quarto-table-cell-role="th">Securities Amortization</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>3.088000e+03</td>
+<td>3088.000000</td>
+<td>2.698000e+03</td>
+<td>3.088000e+03</td>
+<td>2.973000e+03</td>
+<td>2.666000e+03</td>
+<td>2.698000e+03</td>
+<td>2.862000e+03</td>
+<td>3.022000e+03</td>
+<td>2.858000e+03</td>
+<td>...</td>
+<td>6.680000e+02</td>
+<td>3.360000e+02</td>
+<td>2.320000e+02</td>
+<td>7.600000e+01</td>
+<td>2.300000e+02</td>
+<td>1.080000e+02</td>
+<td>7.900000e+01</td>
+<td>3.100000e+01</td>
+<td>8.000000e+00</td>
+<td>5.000000e+00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>-1.212852e+07</td>
+<td>0.204471</td>
+<td>1.416967e+09</td>
+<td>7.290419e+08</td>
+<td>3.838623e+08</td>
+<td>4.538722e+09</td>
+<td>1.365855e+09</td>
+<td>9.665740e+08</td>
+<td>1.393013e+08</td>
+<td>4.716878e+08</td>
+<td>...</td>
+<td>8.581200e+08</td>
+<td>2.822005e+07</td>
+<td>3.352277e+08</td>
+<td>9.453408e+06</td>
+<td>2.126490e+08</td>
+<td>1.563685e+08</td>
+<td>6.309244e+07</td>
+<td>2.004000e+08</td>
+<td>2.342250e+08</td>
+<td>2.670120e+07</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>1.415244e+08</td>
+<td>0.079883</td>
+<td>3.080309e+09</td>
+<td>2.063989e+09</td>
+<td>8.135872e+08</td>
+<td>1.146675e+10</td>
+<td>3.085259e+09</td>
+<td>2.453397e+09</td>
+<td>1.522872e+09</td>
+<td>2.059544e+09</td>
+<td>...</td>
+<td>1.985867e+09</td>
+<td>9.812475e+07</td>
+<td>1.026078e+09</td>
+<td>2.172056e+07</td>
+<td>3.579888e+08</td>
+<td>2.901099e+08</td>
+<td>5.935427e+07</td>
+<td>2.600339e+09</td>
+<td>1.093543e+08</td>
+<td>2.412841e+07</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>-5.202400e+09</td>
+<td>0.000000</td>
+<td>-8.430000e+09</td>
+<td>-1.191100e+10</td>
+<td>-4.460000e+08</td>
+<td>-7.980000e+08</td>
+<td>-1.236200e+10</td>
+<td>-1.297600e+10</td>
+<td>-4.128000e+09</td>
+<td>-9.500000e+07</td>
+<td>...</td>
+<td>-4.000000e+08</td>
+<td>-1.250000e+08</td>
+<td>-4.500000e+07</td>
+<td>-2.300000e+07</td>
+<td>3.370000e+05</td>
+<td>5.050000e+05</td>
+<td>4.500000e+06</td>
+<td>-4.122000e+09</td>
+<td>1.214000e+08</td>
+<td>4.581000e+06</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>-3.079825e+06</td>
+<td>0.168618</td>
+<td>2.714000e+08</td>
+<td>1.090000e+08</td>
+<td>6.000000e+07</td>
+<td>5.609772e+08</td>
+<td>2.593250e+08</td>
+<td>1.754790e+08</td>
+<td>-1.163772e+08</td>
+<td>2.853525e+07</td>
+<td>...</td>
+<td>2.186500e+06</td>
+<td>9.895000e+05</td>
+<td>5.676600e+07</td>
+<td>0.000000e+00</td>
+<td>2.686750e+07</td>
+<td>1.093850e+07</td>
+<td>2.700000e+07</td>
+<td>1.400000e+07</td>
+<td>1.631000e+08</td>
+<td>1.011000e+07</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>0.000000e+00</td>
+<td>0.210000</td>
+<td>5.459560e+08</td>
+<td>2.714000e+08</td>
+<td>1.476340e+08</td>
+<td>1.473500e+09</td>
+<td>5.351335e+08</td>
+<td>3.929600e+08</td>
+<td>-4.199150e+07</td>
+<td>7.415400e+07</td>
+<td>...</td>
+<td>5.390000e+07</td>
+<td>3.950000e+06</td>
+<td>1.230000e+08</td>
+<td>2.816500e+06</td>
+<td>1.030000e+08</td>
+<td>2.868200e+07</td>
+<td>3.492200e+07</td>
+<td>4.529000e+08</td>
+<td>1.830000e+08</td>
+<td>1.320700e+07</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>0.000000e+00</td>
+<td>0.241000</td>
+<td>1.313150e+09</td>
+<td>7.237500e+08</td>
+<td>3.720000e+08</td>
+<td>3.343041e+09</td>
+<td>1.288775e+09</td>
+<td>9.650000e+08</td>
+<td>-8.692000e+06</td>
+<td>1.953368e+08</td>
+<td>...</td>
+<td>6.565000e+08</td>
+<td>1.930000e+07</td>
+<td>2.487338e+08</td>
+<td>1.100000e+07</td>
+<td>2.577500e+08</td>
+<td>9.869550e+07</td>
+<td>6.905000e+07</td>
+<td>6.375000e+08</td>
+<td>3.432500e+08</td>
+<td>4.969400e+07</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>4.056840e+08</td>
+<td>0.400000</td>
+<td>4.322100e+10</td>
+<td>3.391600e+10</td>
+<td>1.382000e+10</td>
+<td>1.406860e+11</td>
+<td>4.322100e+10</td>
+<td>4.037300e+10</td>
+<td>2.405100e+10</td>
+<td>2.435600e+10</td>
+<td>...</td>
+<td>1.311800e+10</td>
+<td>6.080000e+08</td>
+<td>7.712000e+09</td>
+<td>9.800000e+07</td>
+<td>2.264000e+09</td>
+<td>1.379000e+09</td>
+<td>2.650000e+08</td>
+<td>1.129900e+10</td>
+<td>3.870000e+08</td>
+<td>5.591400e+07</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>8 rows × 75 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-0a1615b3-2b25-4f0f-b493-f79dcb9a450d')" title="Convert this dataframe to an interactive table." style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-0a1615b3-2b25-4f0f-b493-f79dcb9a450d button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-0a1615b3-2b25-4f0f-b493-f79dcb9a450d');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-3f7b70b4-8439-4b6b-aa37-9ab0cfd8a89d">
+  <button class="colab-df-quickchart" onclick="quickchart('df-3f7b70b4-8439-4b6b-aa37-9ab0cfd8a89d')" title="Suggest charts" style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-3f7b70b4-8439-4b6b-aa37-9ab0cfd8a89d button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+<p>Now, lets drop non-numerical data and extract the average for each company’s variables over the last year.</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>balance_sheets_numeric <span class="op">=</span> bals.drop(columns<span class="op">=</span>[<span class="st">'Symbol'</span>])</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>income_statements_numeric <span class="op">=</span> incomes.drop(columns<span class="op">=</span>[<span class="st">'Symbol'</span>])</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>non_numeric_cols_bal <span class="op">=</span> balance_sheets_numeric.select_dtypes(exclude<span class="op">=</span>[<span class="bu">float</span>, <span class="bu">int</span>]).columns</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>non_numeric_cols_inc <span class="op">=</span> income_statements_numeric.select_dtypes(exclude<span class="op">=</span>[<span class="bu">float</span>, <span class="bu">int</span>]).columns</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>balance_sheets_numeric <span class="op">=</span> balance_sheets_numeric.drop(columns<span class="op">=</span>non_numeric_cols_bal)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>income_statements_numeric <span class="op">=</span> income_statements_numeric.drop(columns<span class="op">=</span>non_numeric_cols_inc)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>balance_sheets_numeric[<span class="st">'Symbol'</span>] <span class="op">=</span> bals[<span class="st">'Symbol'</span>]</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>income_statements_numeric[<span class="st">'Symbol'</span>] <span class="op">=</span> incomes[<span class="st">'Symbol'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, lets group the data by the ‘Symbol’ or name of the compan and extract the average for each variable.</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bals_avg <span class="op">=</span> balance_sheets_numeric.groupby(<span class="st">'Symbol'</span>).mean().reset_index()</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>incomes_avg <span class="op">=</span> income_statements_numeric.groupby(<span class="st">'Symbol'</span>).mean().reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, lets merge the data into a single dataframe.</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>avg_merged_data <span class="op">=</span> pd.merge(esg_results_df, bals_avg, on<span class="op">=</span><span class="st">"Symbol"</span>,how<span class="op">=</span><span class="st">'inner'</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>avg_merged_data <span class="op">=</span> pd.merge(avg_merged_data, incomes_avg, on<span class="op">=</span><span class="st">"Symbol"</span>,how<span class="op">=</span><span class="st">'inner'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The data that will be analyzed are ESG ratings and certain financial data believed to have greater correlations with the ESG ratings. Now, lets analyze a heatmap comparing the correlations between ESG scores and the selected financial Data.</p>
+<div class="cell" data-outputid="2c3093d5-7643-4da7-b763-87b83df391d8" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>heatmap_data <span class="op">=</span> avg_merged_data[[<span class="st">'Total ESG Risk Score'</span>, <span class="st">'Environmental Risk Score'</span>, <span class="st">'Social Risk Score'</span>,<span class="st">'Governance Risk Score'</span>,<span class="st">'Total Revenue'</span>,<span class="st">'Rent And Landing Fees'</span>, <span class="st">'Research And Development'</span>,<span class="st">'Preferred Stock Dividends'</span>,<span class="st">'Insurance And Claims'</span>]]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> heatmap_data.corr()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">10</span>))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>sns.heatmap(corr, annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">'coolwarm'</span>, fmt<span class="op">=</span><span class="st">".2f"</span>, linewidths<span class="op">=</span><span class="fl">.5</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation Heatmap of ESG Risk Ratings and Financial Data'</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="project_report1_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Judging by the heatmap, its clear to see that ESG ratings do not have much of an effect on most financial data. However, there is a moderate correlation of .43 between “Preferred Stock Dividends” and the “Social Risk Score”.</p>
+<p>##Exploratory Data Analysis</p>
+<p>Lets analyze this relationship further.</p>
+<div class="cell" data-outputid="599c30a2-cc0a-426d-e60c-25bf8f25806b" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x<span class="op">=</span><span class="st">'Preferred Stock Dividends'</span>, y<span class="op">=</span><span class="st">'Social Risk Score'</span>, data<span class="op">=</span>heatmap_data, marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Preferred Stock Dividends vs Social Risk Score'</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Average Preferred Stock Dividends'</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Social Risk Score'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>Text(0, 0.5, 'Social Risk Score')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="project_report1_files/figure-html/cell-10-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Judging by the linegraph, its clear to see that most of the data is inconclusive. This was easy to assume with the correlation coefficient of .43, however, there is some indication that as the “Social Risk Score” increases, the “Average Preferred Stock Dividends” increases. This may indicate that companies with higher social risk scores offer higher preferred stock dividends in order to retain investors despite the higher risk. Alternatively, it could mean that these companies are more profitable allowing them to shell out higher preferred stock dividends, which would be contradictory to the hypothesis. Referring back to the heatmap, notice that preferred stock dividends has a decent correlation with total revenue. Lets analyze this further.</p>
+<div class="cell" data-outputid="61383be4-b949-49b1-9f54-5737588d0917" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x<span class="op">=</span><span class="st">'Total Revenue'</span>, y<span class="op">=</span><span class="st">'Preferred Stock Dividends'</span>, data<span class="op">=</span>heatmap_data, marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Preferred Stock Dividends vs Total Revenue'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Average Preferred Stock Dividends'</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Total Revenue'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>Text(0, 0.5, 'Total Revenue')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="project_report1_files/figure-html/cell-11-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>After analyzing the graph, we notice the slight positive trend between “Total Revenue” and “Average Preferred Stock Dividends”. This indicates that companies with higher total revenues tend to shell out more preferred stock, thus contradicting our hypothesis relating to the social risk score. Lets plot both total revenue and social risk score together over average preferred stock dividends to get a better visualization.</p>
+<div class="cell" data-outputid="5cca8ae8-5a2d-40af-f961-71a40b296c9e" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">6</span>))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x<span class="op">=</span><span class="st">'Preferred Stock Dividends'</span>, y<span class="op">=</span><span class="st">'Total Revenue'</span>, data<span class="op">=</span>heatmap_data, ax<span class="op">=</span>ax1, marker<span class="op">=</span><span class="st">'o'</span>, color<span class="op">=</span><span class="st">'b'</span>, label<span class="op">=</span><span class="st">'Total Revenue'</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x<span class="op">=</span><span class="st">'Preferred Stock Dividends'</span>, y<span class="op">=</span><span class="st">'Social Risk Score'</span>, data<span class="op">=</span>heatmap_data, ax<span class="op">=</span>ax2, marker<span class="op">=</span><span class="st">'o'</span>, color<span class="op">=</span><span class="st">'r'</span>, label<span class="op">=</span><span class="st">'Social Risk Score'</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Total Revenue and Social Risk Score vs Average Preferred Stock Dividends'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Average Preferred Stock Dividends'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Total Revenue'</span>, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span><span class="st">'b'</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Social Risk Score'</span>, fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span><span class="st">'r'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+<pre><code>Text(0, 0.5, 'Social Risk Score')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="project_report1_files/figure-html/cell-12-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>As we can see in the graphed data, as social risk score and average perferred stock dividends increase, total revenue also increases. This disproves our hypothesis testing if risk scores are associated with poorer financial health and lower profitability.</p>
+<p>##Significance</p>
+<p>Though most of the data is inconclusive due to low correlations, the moderate correlation between “Average Preferred Stock Dividends” and “Social Risk Score” provides slight implications. By plotting ‘Total Revenue’ and ‘Social Risk Score’ against ‘Average Preferred Stock Dividends’, its clear to see that social risk score is associated with the inverse of our hypothesis.</p>
+<p>##Results</p>
+<p>In general, there is little to no relationships between risk scores and financial health. However, if there is a correlation, it is contradictory to our hypothesis as risk scores are more associated with better financial health, rather than poor financial health.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Powered with GitHub and Quarto<br>© Charles Canero III, 2023</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

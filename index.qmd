@@ -2,7 +2,7 @@
 title: "Charles Canero III" 
 about:
   template: trestles  # jolla  trestles  solana  marquee  broadside
-  image: img/profile.png
+  image: img/profile_pic_me.png
   image-width: 16em
   image-shape: round # rectangle  round  rounded
   
@@ -23,7 +23,7 @@ about:
 ---
 
 
-Charles Canero majors in Data Analytics at SUNY Geneseo. When not working on data analytics, Charles enjoys spending time working out and playing video games.
+Charles Canero III majors in Data Analytics at SUNY Geneseo. When not working on data analytics, Charles enjoys spending time working out and playing video games.
 
 ## Education
 

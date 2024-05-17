@@ -8,7 +8,7 @@ website:
     pinned: true
     left:
       - text: Project
-        href: project_report.ipynb
+        href: project_report1.ipynb
       - text: Blog
         href: blog-listing.qmd
   page-footer: 
